@@ -1,8 +1,3 @@
-#By SxNade
-#https://github.com/SxNade/Mahakal
-#CONTRIBUTE
-#Author z3r0day
-
 import hashlib
 import os
 import sys
@@ -15,7 +10,7 @@ print (f'''\033[1;97m_  _ ____ ____ _  _    ___  _  _ ____ ___ ____ ____
 |  | |  | ___] |  |    |__] |__| ___]  |  |___ |  \\  \n''' )
 
 time.sleep(1)
-print("Mahakal (v1.1) starting...")
+print("HashBuster (v1.1) starting...")
 time.sleep(1.4)
 supported_hashes = '''
 \n
@@ -32,7 +27,7 @@ print(colored(supported_hashes, 'green'))
 
 
 if len(sys.argv) != 4:
-    print(colored("[*]Usage python3 mahakal.py <hash-value> <hash-type> <path-to-password-file>\n", 'white', attrs=['reverse', 'blink']))
+    print(colored("[*]Usage python3 hash.py <hash-value> <hash-type> <path-to-password-file>\n", 'white', attrs=['reverse', 'blink']))
     sys.exit(0)
     #Checking for correct number of arguments
 
@@ -55,7 +50,7 @@ with open(pass_file, 'r', encoding='latin-1') as file:
             hashed = hash_object.hexdigest()
             if hashed == hash_value:
                 #if the hash_value given equals the hashed_value from passwords at any point print the cracked hash value and exit the program
-                print("[*]Initializing Mahakal. . . . .")
+                print("[*]Initializing HashBuster. . . . .")
                 print(colored(f"\n\n[+]MD5 Hash Cracked Successfully------Value = {line.strip()}\n\n", 'green', attrs=['bold']))
                 sys.exit(0)
 
@@ -65,7 +60,7 @@ with open(pass_file, 'r', encoding='latin-1') as file:
             hashed = hash_object.hexdigest()
             if hashed == hash_value:
                 #if the hash_value given equals the hashed_value from passwords at any point print the cracked hash value and exit the program
-                print("[*]Initializing Mahakal. . . . .")
+                print("[*]Initializing HashBuster. . . . .")
                 print(colored(f"\n\n[+]SHA-1 Hash Cracked Successfully------Value = {line.strip()}\n\n", 'green', attrs=['bold']))
                 sys.exit(0)
         
@@ -75,7 +70,7 @@ with open(pass_file, 'r', encoding='latin-1') as file:
             hashed = hash_object.hexdigest()
             if hashed == hash_value:
                 #if the hash_value given equals the hashed_value from passwords at any point print the cracked hash value and exit the program
-                print("[*]Initializing Mahakal. . . . .")
+                print("[*]Initializing HashBuster. . . . .")
                 print(colored(f"\n\n[+]SHA-256 Hash Cracked Successfully------Value = {line.strip()}\n\n", 'green', attrs=['bold']))
                 sys.exit(0)
 
@@ -85,7 +80,7 @@ with open(pass_file, 'r', encoding='latin-1') as file:
             hashed = hash_object.hexdigest()
             if hashed == hash_value:
                 #if the hash_value given equals the hashed_value from passwords at any point print the cracked hash value and exit the program
-                print("[*]Initializing Mahakal. . . . .")
+                print("[*]Initializing HashBuster. . . . .")
                 print(colored(f"\n\n[+]SHA-512 Hash Cracked Successfully------Value = {line.strip()}\n\n", 'green', attrs=['bold']))
                 sys.exit(0)
         
